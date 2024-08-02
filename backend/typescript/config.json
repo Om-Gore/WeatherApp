@@ -1,0 +1,32 @@
+{
+    "port": 4000,
+    "services": [
+        {
+            "name": "MongoDBAtlas",
+            "class": "MongoDBAtlasWeatherService",
+            "connectionOptions": {
+                "url": "mongodb+srv://om:pass@cluster0.sgopedj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+            }
+        }
+    ],
+    "routers": [
+        {
+            "name": "WeatherRouter",
+            "class": "WeatherRouter",
+            "path": "/weather",
+            "serviceName": "MongoDBAtlas",
+            "routes": [
+                {
+                    "method": "get",
+                    "path": "/",
+                    "handler": "getAllCities"
+                },
+                {
+                    "method": "get",
+                    "path": "/:city",
+                    "handler": "getCityData"
+                }
+            ]
+        }
+    ]
+}

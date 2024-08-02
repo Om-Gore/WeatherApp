@@ -1,0 +1,26 @@
+[
+    {
+        "label": "Subzero",
+        "value": 0
+    },
+    {
+        "label": "Very Cold",
+        "value": 10
+    },
+    {
+        "label": "Cold",
+        "value": 20
+    },
+    {
+        "label": "Warm",
+        "value": 30
+    },
+    {
+        "label": "Hot",
+        "value": 40
+    },
+    {
+        "label": "Extremely Hot",
+        "value": 10000
+    }
+]
